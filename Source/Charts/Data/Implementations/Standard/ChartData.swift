@@ -52,13 +52,13 @@ open class ChartData: NSObject, ExpressibleByArrayLiteral
         self.dataSets = elements
     }
 
-    @objc public init(dataSets: [Element])
+    public init(dataSets: [Element])
     {
         super.init()
         self.dataSets = dataSets
     }
     
-    @objc public convenience init(dataSet: Element)
+    public convenience init(dataSet: Element)
     {
         self.init(dataSets: [dataSet])
     }
@@ -158,7 +158,7 @@ open class ChartData: NSObject, ExpressibleByArrayLiteral
     }
     
     /// Adjusts the minimum and maximum values based on the given DataSet.
-    @objc open func calcMinMax(dataSet d: Element)
+    open func calcMinMax(dataSet d: Element)
     {
         xMax = Swift.max(xMax, d.xMax)
         xMin = Swift.min(xMin, d.xMin)
@@ -238,7 +238,7 @@ open class ChartData: NSObject, ExpressibleByArrayLiteral
     }
     
     /// All DataSet objects this ChartData object holds.
-    @objc open var dataSets: [Element]
+    open var dataSets: [Element]
     {
         get
         {
@@ -268,7 +268,7 @@ open class ChartData: NSObject, ExpressibleByArrayLiteral
     ///   - label:
     ///   - ignorecase:
     /// - Returns: The DataSet Object with the given label. Sensitive or not.
-    @objc open func dataSet(forLabel label: String, ignorecase: Bool) -> Element?
+    open func dataSet(forLabel label: String, ignorecase: Bool) -> Element?
     {
         guard let index = index(forLabel: label, ignoreCase: ignorecase) else { return nil }
         return self[index]
@@ -284,7 +284,7 @@ open class ChartData: NSObject, ExpressibleByArrayLiteral
     /// Also recalculates all minimum and maximum values.
     ///
     /// - Returns: `true` if a DataSet was removed, `false` ifno DataSet could be removed.
-    @objc @discardableResult open func removeDataSet(_ dataSet: Element) -> Element?
+    @discardableResult open func removeDataSet(_ dataSet: Element) -> Element?
     {
         guard let index = firstIndex(where: { $0 === dataSet }) else { return nil }
         return remove(at: index)
@@ -333,26 +333,26 @@ open class ChartData: NSObject, ExpressibleByArrayLiteral
     }
     
     /// - Returns: The DataSet that contains the provided Entry, or null, if no DataSet contains this entry.
-    @objc open func getDataSetForEntry(_ e: ChartDataEntry) -> Element?
+    open func getDataSetForEntry(_ e: ChartDataEntry) -> Element?
     {
         return first { $0.entryForXValue(e.x, closestToY: e.y) === e }
     }
 
     /// - Returns: The index of the provided DataSet in the DataSet array of this data object, or -1 if it does not exist.
-    @objc open func index(of dataSet: Element) -> Index
+    open func index(of dataSet: Element) -> Index
     {
         // TODO: Return nil instead of -1
         return firstIndex(where: { $0 === dataSet }) ?? -1
     }
     
     /// - Returns: The first DataSet from the datasets-array that has it's dependency on the left axis. Returns null if no DataSet with left dependency could be found.
-    @objc open func getFirstLeft(dataSets: [Element]) -> Element?
+    open func getFirstLeft(dataSets: [Element]) -> Element?
     {
         return first { $0.axisDependency == .left }
     }
     
     /// - Returns: The first DataSet from the datasets-array that has it's dependency on the right axis. Returns null if no DataSet with right dependency could be found.
-    @objc open func getFirstRight(dataSets: [Element]) -> Element?
+    open func getFirstRight(dataSets: [Element]) -> Element?
     {
         return first { $0.axisDependency == .right }
     }
@@ -365,7 +365,7 @@ open class ChartData: NSObject, ExpressibleByArrayLiteral
     }
     
     /// Sets a custom ValueFormatter for all DataSets this data object contains.
-    @objc open func setValueFormatter(_ formatter: ValueFormatter)
+    open func setValueFormatter(_ formatter: ValueFormatter)
     {
         forEach { $0.valueFormatter = formatter }
     }
@@ -406,7 +406,7 @@ open class ChartData: NSObject, ExpressibleByArrayLiteral
     /// Checks if this data object contains the specified DataSet. 
     ///
     /// - Returns: `true` if so, `false` ifnot.
-    @objc open func contains(dataSet: Element) -> Bool
+    open func contains(dataSet: Element) -> Bool
     {
         return contains { $0 === dataSet }
     }
@@ -418,7 +418,7 @@ open class ChartData: NSObject, ExpressibleByArrayLiteral
     }
 
     /// The DataSet object with the maximum number of entries or null if there are no DataSets.
-    @objc open var maxEntryCountSet: Element?
+    open var maxEntryCountSet: Element?
     {
         return self.max { $0.entryCount < $1.entryCount }
     }

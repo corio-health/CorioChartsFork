@@ -20,7 +20,7 @@ open class LineRadarRenderer: LineScatterCandleRadarRenderer
     }
     
     /// Draws the provided path in filled mode with the provided drawable.
-    @objc open func drawFilledPath(context: CGContext, path: CGPath, fill: Fill, fillAlpha: CGFloat)
+    open func drawFilledPath(context: CGContext, path: CGPath, fill: Fill, fillAlpha: CGFloat)
     {
         
         context.saveGState()

@@ -3,7 +3,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "Charts",
+    name: "KenkouChartsFork",
     platforms: [
           .iOS(.v12),
           .tvOS(.v12),
@@ -11,19 +11,19 @@ let package = Package(
     ],
     products: [
         .library(
-            name: "Charts",
-            targets: ["Charts"]),
+            name: "KenkouChartsFork",
+            targets: ["KenkouChartsFork"]),
         .library(
-            name: "ChartsDynamic",
+            name: "KenkouChartsForkDynamic",
             type: .dynamic,
-            targets: ["Charts"])
+            targets: ["KenkouChartsFork"])
     ],
     dependencies: [
         .package(url: "https://github.com/apple/swift-algorithms", from: "1.0.0")
     ],
     targets: [
         .target(
-            name: "Charts",
+            name: "KenkouChartsFork",
             dependencies: [.product(name: "Algorithms", package: "swift-algorithms")]
         )
     ],

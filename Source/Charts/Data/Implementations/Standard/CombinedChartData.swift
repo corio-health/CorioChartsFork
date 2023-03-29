@@ -262,7 +262,7 @@ open class CombinedChartData: BarLineScatterCandleBubbleChartData
     /// - Parameters:
     ///   - highlight: current highlight
     /// - Returns: dataset related to highlight
-    @objc open func getDataSetByHighlight(_ highlight: Highlight) -> ChartDataSetProtocol!
+    open func getDataSetByHighlight(_ highlight: Highlight) -> ChartDataSetProtocol!
     {
         guard allData.indices.contains(highlight.dataIndex) else
         {
@@ -282,11 +282,11 @@ open class CombinedChartData: BarLineScatterCandleBubbleChartData
 
     // MARK: Unsupported Collection Methods
 
-    public override func append(_ newElement: ChartData.Element) {
-        fatalError("append(_:) not supported for CombinedData")
-    }
-
-    public override func remove(at i: Int) -> ChartDataSetProtocol {
-        fatalError("remove(at:) not supported for CombinedData")
-    }
+//    public override func append(_ newElement: ChartData.Element) {
+//        fatalError("append(_:) not supported for CombinedData")
+//    }
+//
+//    public override func remove(at i: Int) -> ChartDataSetProtocol {
+//        fatalError("remove(at:) not supported for CombinedData")
+//    }
 }

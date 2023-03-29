@@ -72,7 +72,7 @@ open class BubbleChartRenderer: BarLineScatterCandleBubbleRenderer
     private var _pointBuffer = CGPoint()
     private var _sizeBuffer = [CGPoint](repeating: CGPoint(), count: 2)
     
-    @objc open func drawDataSet(context: CGContext, dataSet: BubbleChartDataSetProtocol, dataSetIndex: Int)
+    open func drawDataSet(context: CGContext, dataSet: BubbleChartDataSetProtocol, dataSetIndex: Int)
     {
         guard let dataProvider = dataProvider else { return }
         

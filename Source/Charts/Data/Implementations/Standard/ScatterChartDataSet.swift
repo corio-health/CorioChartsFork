@@ -39,7 +39,7 @@ open class ScatterChartDataSet: LineScatterCandleRadarChartDataSet, ScatterChart
     
     /// Sets the ScatterShape this DataSet should be drawn with.
     /// This will search for an available ShapeRenderer and set this renderer for the DataSet
-    @objc open func setScatterShape(_ shape: Shape)
+    open func setScatterShape(_ shape: Shape)
     {
         self.shapeRenderer = ScatterChartDataSet.renderer(forShape: shape)
     }
@@ -49,7 +49,7 @@ open class ScatterChartDataSet: LineScatterCandleRadarChartDataSet, ScatterChart
     /// **default**: `SquareShapeRenderer`
     open var shapeRenderer: ShapeRenderer? = SquareShapeRenderer()
     
-    @objc open class func renderer(forShape shape: Shape) -> ShapeRenderer
+    open class func renderer(forShape shape: Shape) -> ShapeRenderer
     {
         switch shape
         {

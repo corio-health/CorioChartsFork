@@ -59,7 +59,7 @@ open class CombinedChartView: BarLineChartViewBase, CombinedChartDataProvider
         }
     }
     
-    @objc open var fillFormatter: FillFormatter
+    open var fillFormatter: FillFormatter
     {
         get
         {

@@ -12,7 +12,6 @@
 import Foundation
 import CoreGraphics
 
-@objc
 public protocol RadarChartDataSetProtocol: LineRadarChartDataSetProtocol
 {
     // MARK: - Data functions and accessors

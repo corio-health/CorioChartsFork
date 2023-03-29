@@ -92,7 +92,7 @@ open class PieChartRenderer: NSObject, DataRenderer
     }
 
     /// Calculates the sliceSpace to use based on visible values and their size compared to the set sliceSpace.
-    @objc open func getSliceSpace(dataSet: PieChartDataSetProtocol) -> CGFloat
+    open func getSliceSpace(dataSet: PieChartDataSetProtocol) -> CGFloat
     {
         guard
             dataSet.automaticallyDisableSliceSpacing,
@@ -109,7 +109,7 @@ open class PieChartRenderer: NSObject, DataRenderer
         return sliceSpace
     }
 
-    @objc open func drawDataSet(context: CGContext, dataSet: PieChartDataSetProtocol)
+    open func drawDataSet(context: CGContext, dataSet: PieChartDataSetProtocol)
     {
         guard let chart = chart else {return }
 

@@ -16,7 +16,7 @@ public protocol Fill
 {
 
     /// Draws the provided path in filled mode with the provided area
-    @objc func fillPath(context: CGContext, rect: CGRect)
+    func fillPath(context: CGContext, rect: CGRect)
 }
 
 public class EmptyFill: NSObject, Fill

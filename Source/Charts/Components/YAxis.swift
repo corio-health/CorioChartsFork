@@ -73,7 +73,7 @@ open class YAxis: AxisBase
     @objc open var spaceBottom = CGFloat(0.1)
     
     /// the position of the y-labels relative to the chart
-    @objc open var labelPosition = LabelPosition.outsideChart
+    open var labelPosition = LabelPosition.outsideChart
 
     /// the alignment of the text in the y-label
     @objc open var labelAlignment: TextAlignment = .left

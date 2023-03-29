@@ -12,7 +12,6 @@
 import Foundation
 import CoreGraphics
 
-@objc
 public protocol PieChartDataSetProtocol: ChartDataSetProtocol
 {
     // MARK: - Styling functions and accessors

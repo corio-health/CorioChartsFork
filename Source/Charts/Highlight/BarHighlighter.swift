@@ -55,7 +55,7 @@ open class BarHighlighter: ChartHighlighter
     ///   - xIndex:
     ///   - yValue:
     /// - Returns:
-    @objc open func getStackedHighlight(high: Highlight,
+    open func getStackedHighlight(high: Highlight,
                                   set: BarChartDataSetProtocol,
                                   xValue: Double,
                                   yValue: Double) -> Highlight?

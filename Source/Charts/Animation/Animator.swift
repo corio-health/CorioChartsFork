@@ -13,7 +13,7 @@ import Foundation
 import CoreGraphics
 import QuartzCore
 
-public protocol AnimatorDelegate
+public protocol AnimatorDelegate: AnyObject
 {
     /// Called when the Animator has stepped.
     func animatorUpdated(_ animator: Animator)
@@ -24,7 +24,7 @@ public protocol AnimatorDelegate
 
 open class Animator: NSObject
 {
-    @objc open weak var delegate: AnimatorDelegate?
+    open weak var delegate: AnimatorDelegate?
     @objc open var updateBlock: (() -> Void)?
     @objc open var stopBlock: (() -> Void)?
     

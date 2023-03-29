@@ -38,7 +38,7 @@ open class ChartLimitLine: ComponentBase
     
     @objc open var drawLabelEnabled = true
     @objc open var label = ""
-    @objc open var labelPosition = LabelPosition.rightTop
+    open var labelPosition = LabelPosition.rightTop
     
     public override init()
     {

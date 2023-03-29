@@ -12,7 +12,6 @@
 import Foundation
 import CoreGraphics
 
-@objc
 public protocol BarChartDataSetProtocol: BarLineScatterCandleBubbleChartDataSetProtocol
 {
     // MARK: - Data functions and accessors

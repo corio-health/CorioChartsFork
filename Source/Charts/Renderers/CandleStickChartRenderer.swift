@@ -51,7 +51,7 @@ open class CandleStickChartRenderer: LineScatterCandleRadarRenderer
     private var _bodyRect = CGRect()
     private var _lineSegments = [CGPoint](repeating: CGPoint(), count: 2)
     
-    @objc open func drawDataSet(context: CGContext, dataSet: CandleChartDataSetProtocol)
+    open func drawDataSet(context: CGContext, dataSet: CandleChartDataSetProtocol)
     {
         guard
             let dataProvider = dataProvider

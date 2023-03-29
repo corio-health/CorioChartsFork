@@ -39,7 +39,7 @@ open class LegendEntry: NSObject
     /// `None` will avoid drawing a form, and any related space.
     /// `Empty` will avoid drawing a form, but keep its space.
     /// `Default` will use the Legend's default.
-    @objc open var form: Legend.Form = .default
+    open var form: Legend.Form = .default
     
     /// Form size will be considered except for when .None is used
     ///

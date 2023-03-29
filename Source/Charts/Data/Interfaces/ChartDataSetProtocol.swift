@@ -12,8 +12,8 @@
 import Foundation
 import CoreGraphics
 
-@objc
-public protocol ChartDataSetProtocol
+
+public protocol ChartDataSetProtocol: AnyObject
 {
     // MARK: - Data functions and accessors
     

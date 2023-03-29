@@ -166,7 +166,7 @@ open class CombinedChartRenderer: NSObject, DataRenderer
     }
 
     /// All sub-renderers.
-    @objc open var subRenderers: [DataRenderer]
+    open var subRenderers: [DataRenderer]
     {
         get { return _renderers }
         set { _renderers = newValue }

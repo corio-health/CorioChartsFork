@@ -19,16 +19,16 @@ open class DefaultFillFormatter: NSObject, FillFormatter
         _ dataSet: LineChartDataSetProtocol,
         _ dataProvider: LineChartDataProvider) -> CGFloat
     
-    @objc open var block: Block?
+    open var block: Block?
     
     public override init() { }
     
-    @objc public init(block: @escaping Block)
+    public init(block: @escaping Block)
     {
         self.block = block
     }
     
-    @objc public static func with(block: @escaping Block) -> DefaultFillFormatter?
+    public static func with(block: @escaping Block) -> DefaultFillFormatter?
     {
         return DefaultFillFormatter(block: block)
     }

@@ -12,7 +12,6 @@
 import Foundation
 import CoreGraphics
 
-@objc
 public protocol ShapeRenderer: AnyObject
 {
     /// Renders the provided ScatterDataSet with a shape.

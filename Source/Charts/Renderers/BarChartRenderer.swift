@@ -292,7 +292,7 @@ open class BarChartRenderer: BarLineScatterCandleBubbleRenderer
 
     private var _barShadowRectBuffer: CGRect = CGRect()
     
-    @objc open func drawDataSet(context: CGContext, dataSet: BarChartDataSetProtocol, index: Int)
+    open func drawDataSet(context: CGContext, dataSet: BarChartDataSetProtocol, index: Int)
     {
         guard let dataProvider = dataProvider else { return }
 

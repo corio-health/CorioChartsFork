@@ -28,7 +28,7 @@ open class PieChartData: ChartData
         super.init(dataSets: elements)
     }
 
-    @objc public var dataSet: PieChartDataSetProtocol?
+    public var dataSet: PieChartDataSetProtocol?
     {
         get
         {
@@ -48,7 +48,7 @@ open class PieChartData: ChartData
     }
 
     /// - returns: All up to one dataSet object this ChartData object holds.
-    @objc open override var dataSets: [ChartDataSetProtocol]
+    open override var dataSets: [ChartDataSetProtocol]
     {
         get
         {

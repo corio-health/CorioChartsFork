@@ -103,9 +103,9 @@ open class ChartViewBase: NSUIView, ChartDataProvider, AnimatorDelegate
     @objc open lazy var legendRenderer = LegendRenderer(viewPortHandler: viewPortHandler, legend: legend)
 
     /// object responsible for rendering the data
-    @objc open var renderer: DataRenderer?
+    open var renderer: DataRenderer?
     
-    @objc open var highlighter: Highlighter?
+    open var highlighter: Highlighter?
 
     /// The ViewPortHandler of the chart that is responsible for the
     /// content area of the chart and its offsets and dimensions.
@@ -133,7 +133,7 @@ open class ChartViewBase: NSUIView, ChartDataProvider, AnimatorDelegate
     @objc open var isDrawMarkersEnabled: Bool { return drawMarkers }
     
     /// The marker that is displayed when a value is clicked on the chart
-    @objc open var marker: Marker?
+    open var marker: Marker?
 
     /// An extra offset to be appended to the viewport's top
     @objc open var extraTopOffset: CGFloat = 0.0
