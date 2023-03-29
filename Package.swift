@@ -3,7 +3,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "KenkouChartsFork",
+    name: "CorioChartsFork",
     platforms: [
           .iOS(.v12),
           .tvOS(.v12),
@@ -11,19 +11,19 @@ let package = Package(
     ],
     products: [
         .library(
-            name: "KenkouChartsFork",
-            targets: ["KenkouChartsFork"]),
+            name: "CorioChartsFork",
+            targets: ["CorioChartsFork"]),
         .library(
-            name: "KenkouChartsForkDynamic",
+            name: "CorioChartsForkDynamic",
             type: .dynamic,
-            targets: ["KenkouChartsFork"])
+            targets: ["CorioChartsFork"])
     ],
     dependencies: [
         .package(url: "https://github.com/apple/swift-algorithms", from: "1.0.0")
     ],
     targets: [
         .target(
-            name: "KenkouChartsFork",
+            name: "CorioChartsFork",
             dependencies: [.product(name: "Algorithms", package: "swift-algorithms")]
         )
     ],
