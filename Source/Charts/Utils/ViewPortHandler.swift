@@ -13,7 +13,6 @@ import Foundation
 import CoreGraphics
 
 /// Class that contains information about the charts current viewport settings, including offsets, scale & translation levels, ...
-@objc(ChartViewPortHandler)
 open class ViewPortHandler: NSObject
 {
     /// matrix used for touch events

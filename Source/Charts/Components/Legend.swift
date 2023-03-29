@@ -12,10 +12,8 @@
 import Foundation
 import CoreGraphics
 
-@objc(ChartLegend)
 open class Legend: ComponentBase
 {
-    @objc(ChartLegendForm)
     public enum Form: Int
     {
         /// Avoid drawing a form
@@ -37,7 +35,6 @@ open class Legend: ComponentBase
         case line
     }
     
-    @objc(ChartLegendHorizontalAlignment)
     public enum HorizontalAlignment: Int
     {
         case left
@@ -45,7 +42,6 @@ open class Legend: ComponentBase
         case right
     }
     
-    @objc(ChartLegendVerticalAlignment)
     public enum VerticalAlignment: Int
     {
         case top
@@ -53,14 +49,12 @@ open class Legend: ComponentBase
         case bottom
     }
     
-    @objc(ChartLegendOrientation)
     public enum Orientation: Int
     {
         case horizontal
         case vertical
     }
     
-    @objc(ChartLegendDirection)
     public enum Direction: Int
     {
         case leftToRight

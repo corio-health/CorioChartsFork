@@ -12,7 +12,6 @@
 import Foundation
 import CoreGraphics
 
-@objc(ChartMarkerImage)
 open class MarkerImage: NSObject, Marker
 {
     /// The marker image to render

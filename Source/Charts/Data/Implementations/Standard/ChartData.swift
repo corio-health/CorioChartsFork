@@ -274,7 +274,6 @@ open class ChartData: NSObject, ExpressibleByArrayLiteral
         return self[index]
     }
     
-    @objc(dataSetAtIndex:)
     open func dataSet(at index: Index) -> Element?
     {
         guard dataSets.indices.contains(index) else { return nil }
@@ -292,7 +291,6 @@ open class ChartData: NSObject, ExpressibleByArrayLiteral
     }
 
     /// Adds an Entry to the DataSet at the specified index. Entries are added to the end of the list.
-    @objc(addEntry:dataSetIndex:)
     open func appendEntry(_ e: ChartDataEntry, toDataSet dataSetIndex: Index)
     {
         guard dataSets.indices.contains(dataSetIndex) else {
@@ -467,14 +465,12 @@ extension ChartData: RandomAccessCollection
 // MARK: RangeReplaceableCollection
 extension ChartData//: RangeReplaceableCollection
 {
-    @objc(addDataSet:)
     public func append(_ newElement: Element)
     {
         _dataSets.append(newElement)
         calcMinMax(dataSet: newElement)
     }
 
-    @objc(removeDataSetByIndex:)
     public func remove(at position: Index) -> Element
     {
         let element = _dataSets.remove(at: position)

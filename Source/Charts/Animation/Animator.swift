@@ -13,7 +13,6 @@ import Foundation
 import CoreGraphics
 import QuartzCore
 
-@objc(ChartAnimatorDelegate)
 public protocol AnimatorDelegate
 {
     /// Called when the Animator has stepped.
@@ -23,7 +22,6 @@ public protocol AnimatorDelegate
     func animatorStopped(_ animator: Animator)
 }
 
-@objc(ChartAnimator)
 open class Animator: NSObject
 {
     @objc open weak var delegate: AnimatorDelegate?

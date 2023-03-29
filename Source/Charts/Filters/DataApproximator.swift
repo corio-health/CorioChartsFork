@@ -12,7 +12,6 @@
 import Foundation
 import CoreGraphics
 
-@objc(ChartDataApproximator)
 open class DataApproximator: NSObject
 {
     /// uses the douglas peuker algorithm to reduce the given arraylist of entries

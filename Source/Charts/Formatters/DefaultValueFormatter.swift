@@ -12,7 +12,6 @@
 import Foundation
 
 /// The default value formatter used for all chart components that needs a default
-@objc(ChartDefaultValueFormatter)
 open class DefaultValueFormatter: NSObject, ValueFormatter
 {
     public typealias Block = (

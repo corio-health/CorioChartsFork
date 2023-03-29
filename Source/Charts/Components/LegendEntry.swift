@@ -12,7 +12,6 @@
 import Foundation
 import CoreGraphics
 
-@objc(ChartLegendEntry)
 open class LegendEntry: NSObject
 {
     public override init()

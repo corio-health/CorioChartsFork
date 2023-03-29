@@ -14,7 +14,6 @@ import CoreGraphics
 
 open class PieChartDataSet: ChartDataSet, PieChartDataSetProtocol
 {
-    @objc(PieChartValuePosition)
     public enum ValuePosition: Int
     {
         case insideSlice

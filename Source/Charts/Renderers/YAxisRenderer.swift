@@ -13,7 +13,6 @@ import Foundation
 import CoreGraphics
 
 
-@objc(ChartYAxisRenderer)
 open class YAxisRenderer: NSObject, AxisRenderer
 {
     @objc public let viewPortHandler: ViewPortHandler

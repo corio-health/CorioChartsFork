@@ -14,7 +14,6 @@ import CoreGraphics
 
 
 /// This class encapsulates everything both Axis, Legend and LimitLines have in common
-@objc(ChartComponentBase)
 open class ComponentBase: NSObject
 {
     /// flag that indicates if this component is enabled or not

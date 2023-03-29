@@ -13,7 +13,6 @@ import Foundation
 import CoreGraphics
 
 // This defines a viewport modification job, used for delaying or animating viewport changes
-@objc(ChartViewPortJob)
 open class ViewPortJob: NSObject
 {
     internal var point: CGPoint = .zero

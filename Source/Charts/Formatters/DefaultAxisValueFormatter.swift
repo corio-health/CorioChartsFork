@@ -11,7 +11,6 @@
 
 import Foundation
 
-@objc(ChartDefaultAxisValueFormatter)
 open class DefaultAxisValueFormatter: NSObject, AxisValueFormatter
 {
     public typealias Block = (

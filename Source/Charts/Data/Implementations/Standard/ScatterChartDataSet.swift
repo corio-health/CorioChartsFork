@@ -15,7 +15,6 @@ import CoreGraphics
 open class ScatterChartDataSet: LineScatterCandleRadarChartDataSet, ScatterChartDataSetProtocol
 {
     
-    @objc(ScatterShape)
     public enum Shape: Int
     {
         case square

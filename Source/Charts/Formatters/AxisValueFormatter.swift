@@ -12,7 +12,6 @@
 import Foundation
 
 /// An interface for providing custom axis Strings.
-@objc(ChartAxisValueFormatter)
 public protocol AxisValueFormatter: AnyObject
 {
     

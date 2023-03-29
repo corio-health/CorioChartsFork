@@ -12,10 +12,8 @@
 import Foundation
 import CoreGraphics
 
-@objc(ChartXAxis)
 open class XAxis: AxisBase
 {
-    @objc(XAxisLabelPosition)
     public enum LabelPosition: Int
     {
         case top

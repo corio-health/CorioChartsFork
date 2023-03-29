@@ -20,7 +20,6 @@ import CoreGraphics
 import Cocoa
 #endif
 
-@objc(ChartDescription)
 open class Description: ComponentBase
 {
     public override init()

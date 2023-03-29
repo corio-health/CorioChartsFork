@@ -12,7 +12,6 @@
 import Foundation
 import CoreGraphics
 
-@objc(ChartFill)
 public protocol Fill
 {
 
@@ -20,14 +19,12 @@ public protocol Fill
     @objc func fillPath(context: CGContext, rect: CGRect)
 }
 
-@objc(ChartEmptyFill)
 public class EmptyFill: NSObject, Fill
 {
 
     public func fillPath(context: CGContext, rect: CGRect) { }
 }
 
-@objc(ChartColorFill)
 public class ColorFill: NSObject, Fill
 {
 
@@ -54,7 +51,6 @@ public class ColorFill: NSObject, Fill
     }
 }
 
-@objc(ChartImageFill)
 public class ImageFill: NSObject, Fill
 {
 
@@ -83,7 +79,6 @@ public class ImageFill: NSObject, Fill
     }
 }
 
-@objc(ChartLayerFill)
 public class LayerFill: NSObject, Fill
 {
 
@@ -105,7 +100,6 @@ public class LayerFill: NSObject, Fill
     }
 }
 
-@objc(ChartLinearGradientFill)
 public class LinearGradientFill: NSObject, Fill
 {
 
@@ -147,7 +141,6 @@ public class LinearGradientFill: NSObject, Fill
     }
 }
 
-@objc(ChartRadialGradientFill)
 public class RadialGradientFill: NSObject, Fill
 {
 

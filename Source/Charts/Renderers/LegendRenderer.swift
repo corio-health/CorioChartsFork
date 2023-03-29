@@ -12,7 +12,6 @@
 import Foundation
 import CoreGraphics
 
-@objc(ChartLegendRenderer)
 open class LegendRenderer: NSObject, Renderer
 {
     @objc public let viewPortHandler: ViewPortHandler

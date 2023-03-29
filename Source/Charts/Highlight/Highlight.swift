@@ -12,7 +12,6 @@
 import Foundation
 import CoreGraphics
 
-@objc(ChartHighlight)
 open class Highlight: NSObject
 {
     /// the x-value of the highlighted value
