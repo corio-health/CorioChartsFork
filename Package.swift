@@ -19,7 +19,7 @@ let package = Package(
             targets: ["CorioChartsFork"])
     ],
     dependencies: [
-        .package(url: "https://github.com/apple/swift-algorithms", exact: "1.2.0")
+        .package(url: "https://github.com/apple/swift-algorithms", .exact("1.2.0"))
     ],
     targets: [
         .target(
